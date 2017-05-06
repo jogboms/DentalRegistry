@@ -1,0 +1,67 @@
+<div class="text-center">
+  <h1 class="">
+    <span class="glyphicon glyphicon-plus"></span>
+  </h1>
+
+  <br />
+  <div class="container-fluid">
+    <alert [open]="!!create_success" type="success" role="alert">
+      <strong>Well done!</strong>
+      You successfully added a new Patient.
+      <a routerLink="/patients/view/{{ id$|async }}" class="alert-link">VISIT</a>.
+    </alert>
+
+    <alert [open]="create_submitted && create_invalid" type="warning" role="alert" [delay]="7500">
+      <strong>Ooops!</strong>
+      You left one or more empty.
+    </alert>
+
+    <form class="form" (submit)="onSubmit($event)" [formGroup]="form" novalidate >
+      <div class="form-group">
+        <div class="row">
+          <div class="text-center">
+            <input required type="number" formControlName="reg_id" autofocus="autofocus" placeholder="Reg ID" class="form-control">
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="form-group">
+        <div class="row">
+          <div class="">
+            <input type="text" formControlName="title" placeholder="Mr." class="form-control">
+          </div>
+          <div class="">
+            <input type="text" formControlName="surname" placeholder="Surname" class="form-control">
+          </div>
+          <div class="">
+            <input type="text" formControlName="names" placeholder="Other names" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="row">
+          <div class="">
+            <input type="number" min="1" formControlName="age" placeholder="Age" class="form-control">
+          </div>
+          <div class="">
+            <input type="text" formControlName="occupation" placeholder="Occupation" class="form-control">
+          </div>
+          <div class="">
+            <input type="tel" formControlName="telephone" placeholder="Phone number" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <textarea formControlName="address" rows="5" class="form-control" placeholder="Address"></textarea>
+      </div>
+
+      <br />
+
+      <button type="submit" class="btn btn-circle btn-success btn-lg">
+        <span class="glyphicon glyphicon-ok fa-lg"></span>
+      </button>
+    </form>
+  </div>
+</div>

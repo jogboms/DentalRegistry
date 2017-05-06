@@ -1,0 +1,20 @@
+<div id="splash">
+  <div>
+    <div class="container">
+
+      <form *ngIf="!IS_LOGGED; else loading" (submit)="onSubmit($event)" class="form col-sm-5 col-xs-6 col-center" [formGroup]="form">
+        <div class="form-group row">
+          <input autofocus required type="password" formControlName="passkey" class="form-control" placeholder="passkey">
+        </div>
+      </form>
+
+      <ng-template #loading>
+        <div style="font-size: 10px; color: whitesmoke;">
+          <div>In a Second...</div>
+          <span class="spinner fa fa-spinner fa-spin"></span>
+        </div>
+      </ng-template>
+
+    </div>
+  </div>
+</div>

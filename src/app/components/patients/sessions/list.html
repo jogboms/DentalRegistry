@@ -1,0 +1,42 @@
+<div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs nav-justified" role="tablist">
+    <li role="presentation" class="active">
+      <a href="#complaints" aria-controls="complaints" role="tab" data-toggle="tab">Complaints</a>
+    </li>
+    <li role="presentation">
+      <a href="#diagnosis" aria-controls="diagnosis" role="tab" data-toggle="tab">Diagnosis</a>
+    </li>
+    <li role="presentation">
+      <a href="#treatments" aria-controls="treatments" role="tab" data-toggle="tab">Treatments</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="complaints">
+      <p class="lead">
+        {{ session.complaints }}
+      </p>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="diagnosis">
+      <p class="lead">
+        {{ session.diagnosis }}
+      </p>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="treatments">
+      <p class="lead">
+        {{ session.treatments }}
+      </p>
+    </div>
+  </div>
+
+  <div class="date">
+    Created On <strong>{{ session.created | date }}</strong>
+
+    <button (click)="onDelete()" class="btn btn-default btn-xs pull-right">DELETE</button>
+  </div>
+</div>
+
+<br />

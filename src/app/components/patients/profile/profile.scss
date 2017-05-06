@@ -1,0 +1,37 @@
+aside {
+  background: rgba(23, 24, 43, 0.78);
+  padding: 1rem 2rem;
+  color: white;
+
+  header {
+    h2 {
+      color: #cb2d7d; 
+      text-transform: capitalize; 
+      word-wrap: break-word; 
+      margin-top: 5px;
+    }
+  }
+  
+  section {
+    font-size: 125%;
+  }
+
+  h4 {
+    margin-top: 0;
+    color: white;
+
+    span {
+      background-color: rgb(255, 255, 255);
+      color: #cb3077;
+      display: block;
+      border-radius: 0;
+      padding: 1rem;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+}
+.sessions { 
+  display: block; 
+  margin: 0 -15px; 
+}

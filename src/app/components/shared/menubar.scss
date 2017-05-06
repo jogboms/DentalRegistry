@@ -1,0 +1,60 @@
+.menu {
+  background: #26a69a;
+  padding-top: 2em;
+  padding-bottom: 2rem;
+  height: 100%;
+  display: table;
+  width: 100%;
+
+  header {
+    border-top: none !important;
+
+    .img-circle {
+      background-color: rgba(255, 255, 255, 0.71);
+      font-weight: 100;
+      font-size: 61pt;
+      color: rgba(0, 121, 107, 0.89);
+      min-width: 170px;
+      display: inline-block;
+      line-height: 2;
+      border: rgba(0, 150, 136, 0.57) solid 0.5rem;
+
+      & > span {
+        line-height: 2;
+      }
+      & + div {
+        font-size: 9px;
+        & > h4,
+        & > h5 {
+          color: white;
+        }
+        & > h4 {
+          font-weight: bold;
+        }
+        & > h5 {}
+      }
+    }
+  }
+
+  footer {
+    display: table-footer-group;
+    text-align: center;
+
+    button {
+      color: white;
+      background-color: rgba(101, 74, 74, 0.33);
+      padding: 1rem 1.5rem !important;
+
+      &:hover, &:active, &:focus {
+        border-radius: 50%;
+        background-color: rgba(144, 144, 144, 0.51);
+      }
+    }
+  }
+}
+
+@media (max-width: 760px){
+  .menu {
+    margin: auto;
+  }
+}

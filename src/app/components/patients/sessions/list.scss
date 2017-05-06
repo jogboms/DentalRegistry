@@ -1,0 +1,36 @@
+.nav-tabs {
+
+  > li.active > a:hover, 
+  > li.active > a:focus:hover {
+    color: #474857;
+  }
+  > li.active > a, 
+  > li.active > a:focus {
+    box-shadow: inset 0 -2px 0 #474857;
+    color: #474857;
+    // color: #666666;
+  }
+  > li > a:hover, 
+  > li > a:focus:hover {
+    box-shadow: inset 0 -2px 0 #26a69a;
+    color: #474857;
+  }
+  &.nav-justified {
+    background: rgba(255, 255, 255, 0.6);
+  }
+}
+.tab-content {
+  background: white;
+  padding: 1.5rem;
+  font-size: 2.5rem;
+} 
+
+.date {
+  background: #26a69a;
+  padding: .5rem 1rem;
+  color: whitesmoke;
+
+  strong {
+    color: white;
+  }
+}
